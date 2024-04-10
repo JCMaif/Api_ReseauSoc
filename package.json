@@ -1,0 +1,29 @@
+{
+  "name": "brief05",
+  "version": "1.0.0",
+  "description": "API to run endpoints on a sql database",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js",
+    "db:create": "psql -U postgres -d miniature -f ./data/structure.sql",
+    "db:seed": "psql -U postgres -d miniature -f ./data/data.sql"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JCMaif/Api_ReseauSoc.git"
+  },
+  "author": "JCA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JCMaif/Api_ReseauSoc/issues"
+  },
+  "homepage": "https://github.com/JCMaif/Api_ReseauSoc#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.11.5"
+  }
+}
