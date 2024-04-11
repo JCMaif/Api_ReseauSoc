@@ -1,9 +1,11 @@
 window.addEventListener('DOMContentLoaded', async () => {
     const buttonLogout = document.querySelector('#logout')
+    const createPostButton = document.querySelector('#createPostButton')
     const mainEl = document.querySelector('main')
 
+
     const token = sessionStorage.getItem('token')
-    if(!token) {
+    if (!token) {
         document.location.href = '/login.html'
         return
     }
@@ -14,7 +16,7 @@ window.addEventListener('DOMContentLoaded', async () => {
         }
     })
         .then(async response => {
-            if(response.ok){
+            if (response.ok) {
                 return response.json()
             }
             throw await response.json()
@@ -23,13 +25,15 @@ window.addEventListener('DOMContentLoaded', async () => {
             mainEl.innerText = error.message
         })
 
-    if(user) {
+    if (user) {
         mainEl.innerText = 'Bonjour ' + user.name
         buttonLogout.addEventListener('click', () => {
             sessionStorage.clear();
             document.location.href = '/logout'
         })
+        createPostButton.addEventListener('click', () =>{
+            document.location.href = '/post.html'
+        })
     }
-
-
 })
+

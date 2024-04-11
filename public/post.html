@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/post" method="post">
+        <label for="group"></label>
+        <input type="text" name="group" id="group" placeholder="groupe">
+        <label for="content"></label>
+        <input type="text" name="content" id="content" placeholder="contenu">
+        
+        <input type="submit" value="Post"/>
+
+    </form>
+</body>
+</html>
+
+
+<!-- DROP TABLE IF EXISTS "post" CASCADE;
+CREATE TABLE "post" (
+    "id" SERIAL PRIMARY KEY,
+    "owner" BIGINT REFERENCES "user"("id") ON DELETE CASCADE,
+    "group" BIGINT REFERENCES "group"("id") ON DELETE SET NULL,
+    "parent" BIGINT REFERENCES "post"("id") ON DELETE SET NULL,
+    "content" TEXT,
+    "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    "is_draft" BOOLEAN DEFAULT FALSE
+); -->

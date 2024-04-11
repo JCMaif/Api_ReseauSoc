@@ -17,14 +17,14 @@
 
 ### Authentification et Gestion des Utilisateurs
 
-   [] Endpoint pour l'inscription (Register) d'un nouvel utilisateur.
-   [x] Endpoint pour la connexion (Login) d'un utilisateur existant.
-   [x] Endpoint pour la déconnexion (Logout) d'un utilisateur authentifié.
+   [x] Endpoint pour l'inscription (Register) d'un nouvel utilisateur.      (/signup.html)
+   [x] Endpoint pour la connexion (Login) d'un utilisateur existant.        (/login.html)
+   [x] Endpoint pour la déconnexion (Logout) d'un utilisateur authentifié.  (/logout)
 
 ### Fil d'actualité
 
-    [] Endpoint pour récupérer les publications les plus récentes.
-    [] Endpoint pour récupérer les publications les plus likées.
+    [x] Endpoint pour récupérer les publications les plus récentes.         (/newest)
+    [x] Endpoint pour récupérer les publications les plus likées.           (/trending)
 
 ### Publications et commentaires
 

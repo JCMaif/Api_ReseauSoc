@@ -10,8 +10,8 @@ export default class User {
     async save() {
         const client = await pool.connect()
         try {
-            const queryText = 'INSERT INTO "user" (username, name, password) VALUES ($1, $2, $3) RETURNING *';
-            const values = [ this.username, this.name, this.password ]
+            const queryText = 'INSERT INTO "user" (name, username, password) VALUES ($1, $2, $3) RETURNING *';
+            const values = [ this.name, this.username, this.password ]
             const result = await client.query(queryText, values)
             return result.rows[ 0 ]
         } finally {

@@ -16,6 +16,7 @@ export async function requireAuthToken(req, res, next) {
     if(userPayload){
         console.log('UserPayload', userPayload)
         req.user = await User.findById(userPayload.id)
+        req.userId = userPayload.id;
         next()
     }
 }

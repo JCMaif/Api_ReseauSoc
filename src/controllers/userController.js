@@ -30,9 +30,9 @@ export async function createUser(req, res,next) {
   if (isExistingUser) {
     return res.send("Ce pseudo est déja utilisé.");
   }
-  const newUser = new User(name, username, password).save()
+  const newUser = new User(username, name, password).save()
     .then(() => {
-      res.redirect((200), '/login')
+      res.redirect((200), '/login.html')
     })
    .catch(error => {
     console.error(error)
